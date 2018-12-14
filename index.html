@@ -23,6 +23,7 @@
                 triggerWithCustomMessage(response.authResponse.accessToken)
             } else {
                 // The person is not logged into your app or we are unable to tell.
+                console.log("unknown ")
                 document.getElementById('status').innerHTML = 'Please log ' +
                     'into this app.';
             }
