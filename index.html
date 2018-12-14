@@ -22,7 +22,7 @@
                 testAPI();
                 document.getElementById("token").innerHTML = response.authResponse.accessToken
                 triggerWithCustomMessage(response.authResponse.accessToken)
-                window.location.href = uri
+                // window.location.href = uri
                 return;
             }
             // The person is not logged into your app or we are unable to tell.
