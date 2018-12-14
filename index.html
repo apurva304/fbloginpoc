@@ -21,12 +21,13 @@
                 testAPI();
                 document.getElementById("token").innerHTML = response.authResponse.accessToken
                 triggerWithCustomMessage(response.authResponse.accessToken)
-            } else {
-                // The person is not logged into your app or we are unable to tell.
-                console.log("unknown asdfsadf")
-                document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
+                return;
             }
+            // The person is not logged into your app or we are unable to tell.
+            console.log("unknown asdfsadf")
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into this app.';
+
         }
 
         function triggerWithCustomMessage(accessToken) {
@@ -110,7 +111,7 @@
 
         function login() {
             FB.login(function(response) {
-               statusChangeCallback(response)
+                statusChangeCallback(response)
             });
         }
     </script>
