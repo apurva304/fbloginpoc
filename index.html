@@ -23,13 +23,14 @@
                 testAPI();
                 document.getElementById("token").innerHTML = response.authResponse.accessToken
                 triggerWithCustomMessage(response.authResponse.accessToken)
-//                 window.location.href = uri
+                window.location.href = uri
                 return;
             }else{
              console.log("unknown asdfsadf")
             document.getElementById('status').innerHTML = 'Please log ' +
                 'into this app.';
             document.getElementById("token").innerHTML = " ";
+            window.location = encodeURI("https://www.facebook.com/dialog/oauth?client_id=379947789213954&redirect_uri=" + uri + "&response_type=token");
             }
 
 
